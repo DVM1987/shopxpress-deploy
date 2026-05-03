@@ -1,20 +1,16 @@
 replicaCount: 1
-
 image:
   repository: 527055790396.dkr.ecr.ap-southeast-1.amazonaws.com/shopxpress-gateway
-  tag: sha-0a500bd
+  tag: sha-ace441c
   pullPolicy: IfNotPresent
-
 service:
   port: 80
   targetPort: 8080
-
 env:
   - name: SERVICE
     value: gateway
   - name: PORT
     value: "8080"
-
 ingress:
   enabled: true
   className: alb
