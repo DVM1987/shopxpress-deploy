@@ -1,0 +1,16 @@
+replicaCount: 1
+
+image:
+  repository: 527055790396.dkr.ecr.ap-southeast-1.amazonaws.com/shopxpress-orders
+  tag: sha-0a500bd
+  pullPolicy: IfNotPresent
+
+service:
+  port: 80
+  targetPort: 8082
+
+env:
+  - name: SERVICE
+    value: orders
+  - name: PORT
+    value: "8082"

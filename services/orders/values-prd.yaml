@@ -1,0 +1,24 @@
+replicaCount: 3
+
+image:
+  repository: 527055790396.dkr.ecr.ap-southeast-1.amazonaws.com/shopxpress-orders
+  tag: sha-0a500bd
+  pullPolicy: IfNotPresent
+
+service:
+  port: 80
+  targetPort: 8082
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    cpu: 500m
+    memory: 256Mi
+
+env:
+  - name: SERVICE
+    value: orders
+  - name: PORT
+    value: "8082"

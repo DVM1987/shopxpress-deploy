@@ -1,0 +1,8 @@
+apiVersion: v2
+name: app
+description: Generic application chart for Shopxpress services (gateway/products/orders)
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
+maintainers:
+  - name: Shopxpress Platform Team
